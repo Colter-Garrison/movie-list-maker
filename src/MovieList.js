@@ -6,7 +6,7 @@ export default function MovieList({ allMovies, handleDeleteMovie }) {
     {
       allMovies.map((movie, i) => <Movie
         handleDeleteMovie={handleDeleteMovie}
-        key={`${movie.title}-${i}`} {...allMovies} />)
+        key={`${movie.title}-${i}`} {...movie} />)
     }
   </div>;
 }
