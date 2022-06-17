@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     const filteredMovies = allMovies.filter(movie =>
-      movie.title.includes(currentFilter));
+      movie.movieTitle.includes(currentFilter));
     setFilteredMovies(filteredMovies);
   }, [currentFilter, allMovies]);
 
@@ -47,10 +47,10 @@ function App() {
         />
         {
           movieTitle && <Movie 
-            title={movieTitle}
-            director={movieFormDirector}
-            year={movieFormYearReleased}
-            color={movieFormColor}
+            movieTitle={movieTitle}
+            movieFormDirector={movieFormDirector}
+            movieFormYearReleased={movieFormYearReleased}
+            movieFormColor={movieFormColor}
           />
         }
       </div>

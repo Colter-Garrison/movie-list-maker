@@ -4,10 +4,10 @@ export default function MovieForm({ movieTitle, setMovieTitle, movieFormDirector
   function handleSubmit(e) {
     e.preventDefault();
     const movie = {
-      title: movieTitle,
-      director: movieFormDirector,
-      year: movieFormYearReleased,
-      color: movieFormColor,
+      movieTitle: movieTitle,
+      movieFormDirector: movieFormDirector,
+      movieFormYearReleased: movieFormYearReleased,
+      movieFormColor: movieFormColor,
     };
     handleAddMovie(movie);
     setMovieTitle('');
