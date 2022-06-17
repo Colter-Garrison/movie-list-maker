@@ -43,7 +43,7 @@ body {
 
 .movie-list {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   margin: 10px;
   flex-wrap: wrap;
 }
