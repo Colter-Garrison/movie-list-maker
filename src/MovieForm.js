@@ -16,21 +16,21 @@ export default function MovieForm({ movieTitle, setMovieTitle, movieFormDirector
     setMovieFormColor('red');
   }
 
-  return <form onSubmit={handleSubmit}>
+  return <form className='upper-form' onSubmit={handleSubmit}>
     <label>
-      Title
+      Title:
       <input required value={movieTitle} onChange={e => setMovieTitle(e.target.value)} />
     </label>
     <label>
-      Director 
+      Director: 
       <input required value={movieFormDirector} onChange={e => setMovieFormDirector(e.target.value)} />
     </label>
     <label>
-      Year Released 
+      Year Released: 
       <input required value={movieFormYearReleased} onChange={e => setMovieFormYearReleased(e.target.value)} />
     </label>
     <label>
-      Poster Color 
+      Poster Color: 
       <select required value={movieFormColor} onChange={e => setMovieFormColor(e.target.value)}>
         <option value='pink'>Pink</option>
         <option value='yellow'>Yellow</option>

@@ -5,7 +5,26 @@ import MovieList from './MovieList';
 import MovieForm from './MovieForm';
 
 function App() {
-  const [allMovies, setAllMovies] = useState([]);
+  const [allMovies, setAllMovies] = useState([
+    {
+      movieTitle: 'Lord of the Rings: The Fellowship of the Ring',
+      movieFormDirector: 'Peter Jackson',
+      movieFormYearReleased: '2001',
+      movieFormColor: 'red'
+    },
+    {
+      movieTitle: 'Lord of the Rings: The Two Towers',
+      movieFormDirector: 'Peter Jackson',
+      movieFormYearReleased: '2002',
+      movieFormColor: 'orange'
+    },
+    {
+      movieTitle: 'Lord of the Rings: The Return of the King',
+      movieFormDirector: 'Peter Jackson',
+      movieFormYearReleased: '2003',
+      movieFormColor: 'Yellow'
+    }
+  ]);
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [currentFilter, setCurrentFilter] = useState('');
   const [movieFormYearReleased, setMovieFormYearReleased] = useState('');
@@ -54,8 +73,10 @@ function App() {
           />
         }
       </div>
-      <p>Filter Movies</p>
-      <input value={currentFilter} onChange={(e) => setCurrentFilter(e.target.value)} />
+      <label className='filter-search'>
+        Filter Movies:
+        <input value={currentFilter} onChange={(e) => setCurrentFilter(e.target.value)} />
+      </label>
       <MovieList allMovies={ filteredMovies.length ? filteredMovies : allMovies }
         handleDeleteMovie={handleDeleteMovie} />
     </div>
