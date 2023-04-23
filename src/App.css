@@ -1,3 +1,7 @@
+body {
+  background: url('./background-2.webp');
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,32 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.movie-list {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+
+.movie-item {
+  height: 10em;
+  width: 10em;
+  margin: 10px;
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, rgba(255, 255, 255, 0.2) 0px -3px 0px inset;
+}
+
+.upper-form {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+  color: white;
+}
+
+.filter-search {
+  display: flex;
+  justify-content: center;
+  height: 1.3em;
+  color: white;
 }
